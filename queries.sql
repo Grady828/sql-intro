@@ -1,0 +1,1 @@
+Company Database"# CREATE TABLE "Employees"("FullName" TEXT NOT NULL, "Salary" INT, "JobPosition" TEXT, "PhoneExtension" INT, "IsPartTime" BOOLEAN);
