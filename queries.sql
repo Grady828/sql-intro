@@ -19,3 +19,19 @@ Company Database=# SELECT * FROM "Employees";
  Tom Vilsack       | 101000 | Sec Of Agriculture          |            760 | f
  Major             |      1 | First Dog                   |              1 | t
 (13 rows)
+Company Database=# SELECT "FullName","PhoneExtension" FROM "Employees" WHERE "IsPartTime" = False;
+     FullName      | PhoneExtension
+-------------------+----------------
+ Joe Biden         |            123
+ Kamala Harris     |            100
+ Janet Yellen      |            100
+ Merrick Garland   |             89
+ Gina Raimondo     |             14
+ Miguel Cardona    |             76
+ Michael Regan     |             11
+ Deb Haaland       |            876
+ Pete Buttigieg    |            543
+ Jennifer Granholm |            981
+ Lloyd Austin      |            761
+ Tom Vilsack       |            760
+(12 rows)
