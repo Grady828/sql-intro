@@ -200,3 +200,23 @@ Time: 0.006s
 
 CREATE TABLE
 Time: 0.012s
+Company Database> CREATE TABLE "ProductOrders" (
+   "Id"             SERIAL PRIMARY KEY,
+   "OrderQuantity"    INTEGER);
+
+CREATE TABLE
+Time: 0.011s
+Company Database> SELECT * FROM "ProductOrders"";
+unterminated quoted identifier at or near ""ProductOrders"""
+LINE 1: SELECT * FROM "ProductOrders""
+                      ^
+
+Time: 0.004s
+Company Database> SELECT * FROM "ProductOrders";
++------+-----------------+
+| Id   | OrderQuantity   |
+|------+-----------------|
++------+-----------------+
+SELECT 0
+Time: 0.007s
+Company Database>
