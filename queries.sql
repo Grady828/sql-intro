@@ -133,3 +133,7 @@ Company Database=# SELECT * FROM "Employees";
  Major             |      1 | First Dog                   |              1 | t          |
  Juice Newton      |    450 | Software Developer          |            431 | t          |
 (14 rows)
+Time: 0.004s
+Company Database> CREATE TABLE "Departments" ("Id" SERIAL PRIMARY KEY, "DepartmentName" TEXT NOT NULL, "Building" TEXT);
+CREATE TABLE
+Time: 0.036s
