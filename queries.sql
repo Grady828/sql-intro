@@ -163,3 +163,40 @@ Company Database> SELECT * FROM "Employees";
 | Juice Newton      | 450      | Software Developer          | 431              | True         | <null>        | <null>         |
 +-------------------+----------+-----------------------------+------------------+--------------+---------------+----------------+
 SELECT 14
+Time: 0.005s
+Company Database> CREATE TABLE "Products" (
+   "Id"             SERIAL PRIMARY KEY,
+   "Price"          DECIMAL,
+   "Name"  TEXT,
+   "Description"  INT,
+ "QuantityInStock" INTEGER);
+CREATE TABLE
+Time: 0.012s
+Time: 0.006s
+Company Database> SELECT * FROM "Products";
++------+---------+--------+---------------+-------------------+
+| Id   | Price   | Name   | Description   | QuantityInStock   |
+|------+---------+--------+---------------+-------------------|
++------+---------+--------+---------------+-------------------+
+SELECT 0
+Time: 0.006s
+
+        ^
+
+Time: 0.004s
+Company Database> CREATE TABLE "Orders" (
+   "Id"             SERIAL PRIMARY KEY,
+   "OrderNumber"    TEXT,
+   "DatePlaced"     DATE,
+   "Email"  TEXT);
+   Time: 0.008s
+Company Database> SELECT * FROM "Orders";
++------+---------------+--------------+---------+
+| Id   | OrderNumber   | DatePlaced   | Email   |
+|------+---------------+--------------+---------|
++------+---------------+--------------+---------+
+SELECT 0
+Time: 0.006s
+
+CREATE TABLE
+Time: 0.012s
