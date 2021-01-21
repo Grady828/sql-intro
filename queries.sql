@@ -261,3 +261,15 @@ Company Database> SELECT * FROM "Employees";
 | Barbara Ramsay    | 80000    | Managar                     | 234              | False        | 9             | 1              |
 | Tom Jones         | 3200     | Admin                       | 456              | True         | 897           | 2              |
 +-------------------+----------+-----------------------------+------------------+--------------+---------------+----------------+
+Company Database> INSERT INTO "Orders"("OrderNumber", "DatePlaced", "Email") VALUES ('X529', '2020Jan1','person@example.com');
+INSERT 0 1
+Time: 0.005s
+Company Database> SELECT * FROM "Orders";
++------+---------------+--------------+--------------------+
+| Id   | OrderNumber   | DatePlaced   | Email              |
+|------+---------------+--------------+--------------------|
+| 1    | X529          | 2020-01-01   | person@example.com |
++------+---------------+--------------+--------------------+
+SELECT 1
+Time: 0.007s
+Company Database>
