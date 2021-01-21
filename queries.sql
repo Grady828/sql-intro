@@ -198,25 +198,40 @@ Company Database> SELECT * FROM "Orders";
 SELECT 0
 Time: 0.006s
 
-CREATE TABLE
-Time: 0.012s
-Company Database> CREATE TABLE "ProductOrders" (
-   "Id"             SERIAL PRIMARY KEY,
-   "OrderQuantity"    INTEGER);
 
-CREATE TABLE
-Time: 0.011s
-Company Database> SELECT * FROM "ProductOrders"";
-unterminated quoted identifier at or near ""ProductOrders"""
-LINE 1: SELECT * FROM "ProductOrders""
-                      ^
 
-Time: 0.004s
-Company Database> SELECT * FROM "ProductOrders";
-+------+-----------------+
-| Id   | OrderQuantity   |
-|------+-----------------|
-+------+-----------------+
 SELECT 0
 Time: 0.007s
+Company Database>
+Company Database> CREATE TABLE "ProductOrders" (
+   "Id"             SERIAL PRIMARY KEY,
+   "OrderQuantity"    INTEGER,
+   "OrderId"         INTEGER REFERENCES "Orders"("Id"),
+   "ProductId"       INTEGER REFERENCES "Products"("Id"));
+
+
+CREATE TABLE
+Time: 0.014s
+Company Database> SELECT * FROM "ProductOrders";
++------+-----------------+-----------+-------------+
+| Id   | OrderQuantity   | OrderId   | ProductId   |
+|------+-----------------+-----------+-------------|
++------+-----------------+-----------+-------------+
+Company Database> INSERT INTO "Products"("Price", "Name", "Description", "QuantityInStock") VALUES ('12.45', 'Widget',
+  'TheOriginalWidget',100);
+INSERT 0 1
+Time: 0.005s
+Company Database> INSERT INTO "Products"("Price", "Name", "Description", "QuantityInStock") VALUES ('99.99', 'Flowbee',
+  'PerfectForHaircuts',3);
+INSERT 0 1
+Time: 0.005s
+Company Database> SELECT * FROM "Products";
++------+---------+---------+--------------------+-------------------+
+| Id   | Price   | Name    | Description        | QuantityInStock   |
+|------+---------+---------+--------------------+-------------------|
+| 1    | 12.45   | Widget  | TheOriginalWidget  | 100               |
+| 2    | 99.99   | Flowbee | PerfectForHaircuts | 3                 |
++------+---------+---------+--------------------+-------------------+
+SELECT 2
+Time: 0.008s
 Company Database>
