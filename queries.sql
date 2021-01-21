@@ -235,3 +235,29 @@ Company Database> SELECT * FROM "Products";
 SELECT 2
 Time: 0.008s
 Company Database>
+Company Database> INSERT INTO "Employees"("FullName", "Salary", "JobPosition", "PhoneExtension", "IsPartTime", "ParkingSpot", "DepartmentId") VALUES ('Tom Jones', 3200,
+  'Admin',456, true, 897, 2);
+INSERT 0 1
+Time: 0.003s
+Company Database> SELECT * FROM "Employees";
++-------------------+----------+-----------------------------+------------------+--------------+---------------+----------------+
+| FullName          | Salary   | JobPosition                 | PhoneExtension   | IsPartTime   | ParkingSpot   | DepartmentId   |
+|-------------------+----------+-----------------------------+------------------+--------------+---------------+----------------|
+| Joe Biden         | 130000   | President                   | 123              | False        | <null>        | <null>         |
+| Kamala Harris     | 100000   | VicePresident               | 100              | False        | <null>        | <null>         |
+| Janet Yellen      | 90000    | FedReserveChair             | 100              | False        | <null>        | <null>         |
+| Merrick Garland   | 75000    | AttorneyGeneral             | 89               | False        | <null>        | <null>         |
+| Gina Raimondo     | 85000    | CommerceSecretary           | 14               | False        | <null>        | <null>         |
+| Miguel Cardona    | 980000   | EPA Head                    | 76               | False        | <null>        | <null>         |
+| Michael Regan     | 82000    | Dept of Education Head      | 11               | False        | <null>        | <null>         |
+| Deb Haaland       | 99000    | Dept of Interior Head       | 876              | False        | <null>        | <null>         |
+| Pete Buttigieg    | 91000    | Dept of Transportation Head | 543              | False        | <null>        | <null>         |
+| Jennifer Granholm | 91000    | Dept of Energy Head         | 981              | False        | <null>        | <null>         |
+| Lloyd Austin      | 103000   | Dept of Defense Head        | 761              | False        | <null>        | <null>         |
+| Tom Vilsack       | 101000   | Sec Of Agriculture          | 760              | False        | <null>        | <null>         |
+| Major             | 1        | First Dog                   | 1                | True         | <null>        | <null>         |
+| Juice Newton      | 450      | Software Developer          | 431              | True         | <null>        | <null>         |
+| Tim Smith         | 40000    | Programmer                  | 123              | False        | 90            | 1              |
+| Barbara Ramsay    | 80000    | Managar                     | 234              | False        | 9             | 1              |
+| Tom Jones         | 3200     | Admin                       | 456              | True         | 897           | 2              |
++-------------------+----------+-----------------------------+------------------+--------------+---------------+----------------+
