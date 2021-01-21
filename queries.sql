@@ -297,5 +297,25 @@ Company Database> SELECT * FROM "ProductOrders";
 | 3    | 2               | 1         | 2           |
 +------+-----------------+-----------+-------------+
 SELECT 2
-Time: 0.005s
-Company Database>
+Company Database> SELECT * FROM "Employees" JOIN "Departments" ON "Employees"."DepartmentId" = "Departments"."Id" WHERE "Departments"."Building" = 'Main';
++----------------+----------+---------------+------------------+--------------+---------------+----------------+------+------------------+------------+
+| FullName       | Salary   | JobPosition   | PhoneExtension   | IsPartTime   | ParkingSpot   | DepartmentId   | Id   | DepartmentName   | Building   |
+|----------------+----------+---------------+------------------+--------------+---------------+----------------+------+------------------+------------|
+| Tim Smith      | 40000    | Programmer    | 123              | False        | 90            | 1              | 1    | Development      | Main       |
+| Barbara Ramsay | 80000    | Managar       | 234              | False        | 9             | 1              | 1    | Development      | Main       |
++----------------+----------+---------------+------------------+--------------+---------------+----------------+------+------------------+------------+
+SELECT 2
+Time: 0.007s
+Company Database> SELECT * FROM "Employees" JOIN "Departments" ON "Employees"."DepartmentId" = "Departments"."Id" WHERE "Departments"."Building" = 'North Side';
++------------+----------+---------------+------------------+--------------+---------------+----------------+------+------------------+------------+
+| FullName   | Salary   | JobPosition   | PhoneExtension   | IsPartTime   | ParkingSpot   | DepartmentId   | Id   | DepartmentName   | Building   |
+|------------+----------+---------------+------------------+--------------+---------------+----------------+------+------------------+------------|
++------------+----------+---------------+------------------+--------------+---------------+----------------+------+------------------+------------+
+SELECT 0
+Time: 0.006s
+Company Database> SELECT * FROM "Employees" JOIN "Departments" ON "Employees"."DepartmentId" = "Departments"."Id" WHERE "Departments"."Building" = 'East Side';
++------------+----------+---------------+------------------+--------------+---------------+----------------+------+------------------+------------+
+| FullName   | Salary   | JobPosition   | PhoneExtension   | IsPartTime   | ParkingSpot   | DepartmentId   | Id   | DepartmentName   | Building   |
+|------------+----------+---------------+------------------+--------------+---------------+----------------+------+------------------+------------|
++------------+----------+---------------+------------------+--------------+---------------+----------------+------+------------------+------------+
+SELECT 0
