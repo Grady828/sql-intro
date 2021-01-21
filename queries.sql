@@ -273,3 +273,15 @@ Company Database> SELECT * FROM "Orders";
 SELECT 1
 Time: 0.007s
 Company Database>
+Company Database> INSERT INTO "ProductOrders"("OrderQuantity", "OrderId", "ProductId") VALUES ('3', '1','1');
+INSERT 0 1
+Time: 0.004s
+Company Database> SELECT * FROM "ProductOrders";
++------+-----------------+-----------+-------------+
+| Id   | OrderQuantity   | OrderId   | ProductId   |
+|------+-----------------+-----------+-------------|
+| 1    | 3               | 1         | 1           |
++------+-----------------+-----------+-------------+
+SELECT 1
+Time: 0.005s
+Company Database>
