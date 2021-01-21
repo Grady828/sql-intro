@@ -325,3 +325,13 @@ Company Database> SELECT * FROM "ProductOrders" WHERE "ProductId" = 2;
 |------+-----------------+-----------+-------------|
 | 3    | 2               | 1         | 2           |
 +------+-----------------+-----------+-------------+
+Company Database> SELECT "ProductOrders". "OrderQuantity" FROM "ProductOrders" JOIN "Orders" ON "ProductOrders"."OrderId" = "Orders"."Id" JOIN "Products" ON "ProductOrder
+ s"."ProductId" = "Products"."Id" WHERE "Products"."Name" = 'Flowbee' AND "Orders"."OrderNumber" = 'X529';
++-----------------+
+| OrderQuantity   |
+|-----------------|
+| 2               |
++-----------------+
+SELECT 1
+Time: 0.007s
+Company Database>
